@@ -27,3 +27,12 @@
 *.exe
 *.out
 *.app
+/T4Practice/T4Practice/bin
+/T4Practice/T4Practice/bin
+/T4Practice/packages
+/T4Practice/T4Practice/obj
+
+T4Practice/.vs/config/applicationhost.config
+/T4Practice/.vs
+/T4Practice/T4PracticeConsole/bin
+/T4Practice/T4PracticeConsole/obj
