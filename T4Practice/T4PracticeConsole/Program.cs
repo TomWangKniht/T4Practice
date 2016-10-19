@@ -39,7 +39,7 @@ namespace T4PracticeConsole
             return data;
         }
 
-        static void outResult(ModelSampleData data,String outPath,String result) {
+        static void outResult(String className,String outPath,String result) {
             Console.WriteLine(result);
             Console.WriteLine("press 'y' if confirm...");
             var key = Console.ReadKey().KeyChar;
@@ -48,7 +48,7 @@ namespace T4PracticeConsole
             {
                 //if(CommonUtil.CreateDirectoryIfNotExist)
                 CommonUtil.CreateDirectoryIfNotExist(outPath);
-                System.IO.File.WriteAllText(outPath + "/" + data.Setting.Name + ".cs", result);
+                System.IO.File.WriteAllText(outPath + "/" + className + ".cs", result);
                 Console.WriteLine("Generate...");
             }
         }
@@ -60,7 +60,7 @@ namespace T4PracticeConsole
 
             var sample = new ModelSamplePartial(data);
             var pageContent = sample.TransformText();
-            outResult(data, outPath, pageContent);
+            outResult(data.Setting.Name, outPath, pageContent);
          
         }
 
@@ -78,7 +78,7 @@ namespace T4PracticeConsole
             sample.Initialize(); // Must call this to transfer values.
             string pageContent = sample.TransformText();
 
-            outResult(data, outPath, pageContent);
+            outResult(data.Setting.Name, outPath, pageContent);
         }
     }
 }
