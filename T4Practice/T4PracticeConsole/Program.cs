@@ -48,7 +48,7 @@ namespace T4PracticeConsole
             {
                 //if(CommonUtil.CreateDirectoryIfNotExist)
                 CommonUtil.CreateDirectoryIfNotExist(outPath);
-                System.IO.File.WriteAllText(outPath + "/" + className + ".cs", result);
+                System.IO.File.WriteAllText(outPath + "/" + className + ".cs", result, Encoding.UTF8);
                 Console.WriteLine("Generate...");
             }
         }
